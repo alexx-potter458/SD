@@ -6,4 +6,5 @@ int main()
 {
     cout << "esti prost";
     cout << "hai dreq azi";
+    cout << "Gata ba, merge!";
 }
