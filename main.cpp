@@ -22,8 +22,7 @@ class Multime {
 
 void insereaza(Multime &mySet, int element){
         mySet.multime.insert(element);
-        for(int i=0; i<1000333323; i++)
-        mySet.multime.insert(i+323);
+
     }
 
 int main()
@@ -31,6 +30,6 @@ int main()
     Multime multime;
     insereaza(multime, 2);
     cout<< "gata";
-    //multime.afiseaza();
+    multime.afiseaza();
     
 }
