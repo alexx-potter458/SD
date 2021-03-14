@@ -2,15 +2,14 @@
 
 using namespace std;
 
- class MultimeVector {
-     public:
+class MultimeVector {
+    public:
         int* multime;
         int lungime = 0;
         int maxim = INT_MIN;
         int minim = INT_MAX;
 
         MultimeVector() {
-           
             multime = new int[lungime];
         }
 
@@ -36,8 +35,53 @@ void insereaza(MultimeVector &multimeaMea, int element) {
         multimeaMea.minim = element;
 }
 
+// QUICKSORT
 
-//2. Stergere elemet x
+void QuickSort(int* vector, int st, int dr){
+	if(st < dr)
+	{   //pivotul este inițial v[st]
+		int m = (st + dr) / 2;
+		int aux = vector[st];
+		vector[st] = vector[m];
+		vector[m] = aux;
+		int i = st , j = dr, d = 0;
+		while(i < j)
+		{
+			if(vector[i] > vector[j])
+			{
+				aux = vector[i]; 
+				vector[i] = vector[j];
+				vector[j] = aux;
+				d = 1 - d;
+			}
+			i += d;
+			j -= 1 - d;
+		}
+		QuickSort(vector, st , i - 1);
+		QuickSort(vector, i + 1 , dr);
+	}
+}
+
+//CAUTARE BINARA
+
+int CautareBinara(int* vector, int st, int dr, int elementDeCautat)
+{
+    if(st > dr)
+        return -1;
+    else
+    {
+        int mijloc =(st+dr)/2;
+        if(elementDeCautat == vector[mijloc])
+            return mijloc;
+        if(elementDeCautat < vector[mijloc])
+            return CautareBinara(vector , st, mijloc-1, elementDeCautat);
+        else
+            return CautareBinara(vector , mijloc+1, dr, elementDeCautat);
+    }
+}
+
+
+//2. Stergere element x
 
 void sterge(MultimeVector &multimeaMea, int element){
     bool amGasitElemem = false;
@@ -66,14 +110,26 @@ void sterge(MultimeVector &multimeaMea, int element){
     }
 }
 
+//3. Elementul Minim
+
 int min(MultimeVector &multimeaMea)
 {
     return multimeaMea.minim;
 }
 
+//4. Elementul Maxim
+
 int max(MultimeVector &multimeaMea)
 {
     return multimeaMea.maxim;
+}
+
+//5. Succesorul elementului x
+
+int succesor(MultimeVector &multimeaMea, int x){
+    QuickSort(multimeaMea.multime, 0, multimeaMea.lungime);
+    int pozitie = CautareBinara(multimeaMea.multime, 0, multimeaMea.lungime, x);
+    return multimeaMea.multime[pozitie + 1];
 }
 
 
@@ -83,15 +139,15 @@ int main()
     cout << "\n\n-------------------------\n\n\n";
 
     MultimeVector v;
-    for (int i = 0; i < 100; i ++)
+    for (int i = 0; i < 10; i ++)
     {
-        insereaza(v, rand()%1000);
+        insereaza(v, rand() % 100);
     }
-    
 
     for(int i=0; i< v.lungime; i++)
     cout << v.multime[i]<< " ";
-
-    cout << "\n\n\n" << min(v) << " " << max(v);
+    cout << '\n';
+    //cout << "\n\n\n" << min(v) << " " << max(v);
+    cout << succesor(v, 24);
     
 }
