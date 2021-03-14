@@ -6,6 +6,8 @@ using namespace std;
      public:
         int* multime;
         int lungime = 0;
+        int maxim = INT_MIN;
+        int minim = INT_MAX;
 
         MultimeVector() {
            
@@ -16,7 +18,7 @@ using namespace std;
 
 //1. Inserare element x
 
-void insereaza(MultimeVector &multimeaMea, int elemet) {
+void insereaza(MultimeVector &multimeaMea, int element) {
     int* temp;
     temp = new int[multimeaMea.lungime + 1];
 
@@ -24,8 +26,14 @@ void insereaza(MultimeVector &multimeaMea, int elemet) {
     delete [] multimeaMea.multime;
     multimeaMea.multime = temp;
 
-    multimeaMea.multime[multimeaMea.lungime] = elemet;
+    multimeaMea.multime[multimeaMea.lungime] = element;
     multimeaMea.lungime ++;
+
+    if(element > multimeaMea.maxim)
+        multimeaMea.maxim = element;
+
+    if(element < multimeaMea.minim)
+        multimeaMea.minim = element;
 }
 
 
@@ -58,6 +66,16 @@ void sterge(MultimeVector &multimeaMea, int element){
     }
 }
 
+int min(MultimeVector &multimeaMea)
+{
+    return multimeaMea.minim;
+}
+
+int max(MultimeVector &multimeaMea)
+{
+    return multimeaMea.maxim;
+}
+
 
 int main()
 {
@@ -65,14 +83,15 @@ int main()
     cout << "\n\n-------------------------\n\n\n";
 
     MultimeVector v;
-    for (size_t i = 0; i < 55; i ++)
+    for (int i = 0; i < 100; i ++)
     {
-        insereaza(v, i);
+        insereaza(v, rand()%1000);
     }
     
-    sterge(v, 56);
+
     for(int i=0; i< v.lungime; i++)
     cout << v.multime[i]<< " ";
 
+    cout << "\n\n\n" << min(v) << " " << max(v);
     
 }
