@@ -11,10 +11,6 @@ class Multime {
 
     }
 
-    void insereaza(int element){
-        this->multime.insert(element);
-    }
-
     void afiseaza(){
         for (this->it = this->multime.begin(); this->it != this->multime.end(); ++ this->it){
             cout << *this->it << " ";
@@ -24,18 +20,17 @@ class Multime {
         
 };
 
+void insereaza(Multime &mySet, int element){
+        mySet.multime.insert(element);
+        for(int i=0; i<1000333323; i++)
+        mySet.multime.insert(i+323);
+    }
 
 int main()
 {
-<<<<<<< HEAD
     Multime multime;
-    multime.insereaza(2);
-    multime.afiseaza();
+    insereaza(multime, 2);
+    cout<< "gata";
+    //multime.afiseaza();
     
-=======
-    cout << "esti prost";
-    cout << "hai dreq azi";
-    cout << "Gata ba, merge!";
-    cout << "bine, duminica la 8 jum sa fii pe zona";
->>>>>>> 566e336c44957a8dabf217a649f7b768db602ed5
 }
