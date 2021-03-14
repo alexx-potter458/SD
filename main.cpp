@@ -55,20 +55,30 @@ void insereaza(MultimeVector &multimeaMea, int elemet) {
 
 
 void sterge(MultimeVector &multimeaMea, int element){
-    int* temp;
+    bool amGasitElemem = false;
+    size_t i = 0;
 
-    temp = new int[multimeaMea.lungime - 1];
-    for (size_t i = 0; i < multimeaMea.lungime - 1; i ++){
-        if(multimeaMea.multime[i] == element){
-            continue;
-        }else{
-            temp[i] = multimeaMea.multime[i];
+    for (i; i < multimeaMea.lungime; i ++) {
+        
+        if(multimeaMea.multime[i] == element) {
+           amGasitElemem = true; 
         }
-        cout << temp[i]<< "   ||   ";
+
+        if( amGasitElemem == true) {
+            multimeaMea.multime[i] = multimeaMea.multime[i+1];
+        }
+
     }
-    delete [] multimeaMea.multime;
-    multimeaMea.multime = temp;
-    multimeaMea.lungime --;
+    
+    if(amGasitElemem) {
+        int* temp;
+        multimeaMea.lungime--;
+
+        temp = new int[multimeaMea.lungime];
+        copy(multimeaMea.multime, multimeaMea.multime + multimeaMea.lungime,temp);
+        delete [] multimeaMea.multime;
+        multimeaMea.multime = temp;
+    }
 }
 
 
@@ -91,7 +101,7 @@ int main()
         insereaza(v, i);
     }
     
-    sterge(v, 30);
+    sterge(v, 56);
     for(int i=0; i< v.lungime; i++)
     cout << v.multime[i]<< " ";
 
