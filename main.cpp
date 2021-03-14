@@ -1,32 +1,6 @@
 #include <iostream>
-#include <set>
 
 using namespace std;
-
-////////////////// incercare cu set
-
-class Multime {
-    public:
-        set<int> multime;
-        set<int>::iterator it;
-    Multime(){
-
-    }
-
-    void afiseaza(){
-        for (this->it = this->multime.begin(); this->it != this->multime.end(); ++ this->it){
-            cout << *this->it << " ";
-        }
-        cout << '\n';
-    }
-        
-};
-
-/*void insereaza(Multime &mySet, int element){
-        mySet.multime.insert(element);
-    }
-*/
-////////////////////////// incercare cu vector
 
  class MultimeVector {
      public:
@@ -40,11 +14,13 @@ class Multime {
 
  };
 
+//1. Inserare element x
+
 void insereaza(MultimeVector &multimeaMea, int elemet) {
     int* temp;
     temp = new int[multimeaMea.lungime + 1];
 
-    copy(multimeaMea.multime, multimeaMea.multime + multimeaMea.lungime, temp); // Suggested by comments from Nick and Bojan
+    copy(multimeaMea.multime, multimeaMea.multime + multimeaMea.lungime, temp);
     delete [] multimeaMea.multime;
     multimeaMea.multime = temp;
 
@@ -53,6 +29,7 @@ void insereaza(MultimeVector &multimeaMea, int elemet) {
 }
 
 
+//2. Stergere elemet x
 
 void sterge(MultimeVector &multimeaMea, int element){
     bool amGasitElemem = false;
@@ -82,17 +59,9 @@ void sterge(MultimeVector &multimeaMea, int element){
 }
 
 
-
-/////////////////
-
-
 int main()
 {
-    //Multime multime;
-   // insereaza(multime, 2);
-    cout<< "gata";
-    //multime.afiseaza();
-
+ 
     cout << "\n\n-------------------------\n\n\n";
 
     MultimeVector v;
