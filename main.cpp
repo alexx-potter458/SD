@@ -22,7 +22,6 @@ class Multime {
 
 void insereaza(Multime &mySet, int element){
         mySet.multime.insert(element);
-
     }
 
 int main()
