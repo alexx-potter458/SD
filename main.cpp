@@ -1,6 +1,11 @@
 #include <iostream>
+#include <fstream>
+
+#include <chrono>
 
 using namespace std;
+using namespace std::chrono;
+
 
 class MultimeVector {
     public:
@@ -173,8 +178,10 @@ int este_in(MultimeVector &multimeaMea, int x){
         }
     }
     if(amGasitElement){
+        cout << "dea, se afla in multime";
         return 69;
     }else {
+        cout << "ai belit pl baiatul meu";
         return 0;
     }
     
@@ -183,21 +190,52 @@ int este_in(MultimeVector &multimeaMea, int x){
 
 int main()
 {
-    cout << "\n\n-------------------------\n\n\n";
+
+    auto start = high_resolution_clock::now();
+    int numar;
+    ifstream f("read.txt");
+    ofstream g("write.txt");
+    g << "\n\n-------------------------\n\n\n";
 
     MultimeVector v;
-    for (int i = 0; i < 10; i ++)
+    while(f >> numar)
     {
-        insereaza(v, i % 10);
+        insereaza(v, numar);    // O(n)
     }
 
-    for(int i=0; i< v.lungime; i++)
-        cout << v.multime[i]<< " ";
+    // for(int i=0; i< v.lungime; i++)
+    //     g << v.multime[i]<< " ";
+    // g << '\n';
+    g << "\n\n\n" << min(v) << " " << max(v) << '\n';  // O(1)
+    sterge(v, 10);  // O(n) in cel mai rau caz
+    g << predecesor(v, 600) << " " << '\n'; // O(n*logn)
+    g << k_element(v, 2931) << '\n';  // O(n*logn)
+    g << cardinal(v) << '\n';  // O(1)
+    g << este_in(v, -1) << '\n'; // O(n) in cel mai rau caz
+    f.close();
+    g.close();
+
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop - start);
     cout << '\n';
-    // cout << "\n\n\n" << min(v) << " " << max(v);
-    // cout << succesor(v, 24);
-    // cout << predecesor(v, 0) << " ";
-    // cout << k_element(v, 2);
-    // cout << cardinal(v);
-    // cout << este_in(v, -1);
+    cout << duration.count() << endl;   
+
+    return 0;
+
+    ///////****** COMPLEXITATE FINALA O(n*logn)
+
+
+    /*
+    MOTIVATIE:
+        Motivatia folosirii acestei structuri este reducerea timpului de executie prin memorarea in clasa a datelor necesare de tipul:  
+        cadrinal multime, minim, maxim, astfel obtinand o complexitate O(1), evitand parcurgerile in plus ale multimii care ar duce la
+        o complexitate de O(n); (+ clasele sunt misto)
+        Avantajele structurii:
+            este mai natural pentru gândirea noastră să modelăm un software folosind obiecte și clase. Ne gândim 
+            deja în termeni de obiecte cu atribute si metode. Putem crea diferite module independente în cod destul de ușor ceea ce ajută la reutilizare.
+        Dezavantajele structurii:
+            schimbarea planului unor obiecte este dificilă. Dacă o multime este o multime, este greu să decizi la un moment dat că doresti să fie o mașină.
+            În realitate, acest lucru se întâmplă mai rar, dar în software este mai frecvent decât s-ar aștepta.
+
+    */
 }
