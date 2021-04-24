@@ -250,20 +250,20 @@ int main()
     
     auto start = high_resolution_clock::now();
 
-    MultimeVector v;
+    MultimeVector S;
     while(f >> numar)
     {
-        insereaza(v, numar);// O(n)
+        insereaza(S, numar);// O(n)
     }
 
-    g << "Minim: " << min(v) << "\nMaxim: " << max(v) << '\n';  // O(1)
-    sterge(v, elementDeSters);  // O(n) in cel mai rau caz
-    g << "Predecesor: " << predecesor(v, numarPredecesor) << " " << '\n'; // O(n*logn)
-    g << "Succesor: " << succesor(v, numarSuccesor) << " " << '\n'; // O(n*logn)
-    g << "K-element in ordine crescatoare: " << k_element(v, elementulK) << '\n';  // O(n*logn)
-    g << "Cardinal: " << cardinal(v) << '\n';  // O(1)
+    g << "Minim: " << min(S) << "\nMaxim: " << max(S) << '\n';  // O(1)
+    sterge(S, elementDeSters);  // O(n) in cel mai rau caz
+    g << "Predecesor: " << predecesor(S, numarPredecesor) << " " << '\n'; // O(n*logn)
+    g << "Succesor: " << succesor(S, numarSuccesor) << " " << '\n'; // O(n*logn)
+    g << "K-element in ordine crescatoare: " << k_element(S, elementulK) << '\n';  // O(n*logn)
+    g << "Cardinal: " << cardinal(S) << '\n';  // O(1)
 
-    if(este_in(v, exsitaNumar) == 1) // O(n) in cel mai rau caz
+    if(este_in(S, exsitaNumar) == 1) // O(n) in cel mai rau caz
         g << "Numarul este in multime" << '\n';
     else
         g << "Numarul nu este in multime" << '\n'; 
