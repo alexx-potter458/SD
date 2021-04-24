@@ -178,10 +178,9 @@ int este_in(MultimeVector &multimeaMea, int x){
         }
     }
     if(amGasitElement){
-        cout << "dea, se afla in multime";
-        return 69;
+   
+        return 1;
     }else {
-        cout << "ai belit pl baiatul meu";
         return 0;
     }
     
@@ -191,11 +190,50 @@ int este_in(MultimeVector &multimeaMea, int x){
 int main()
 {
 
-    auto start = high_resolution_clock::now();
+
+    
     int numar;
-    ifstream f("read.txt");
-    ofstream g("write.txt");
-    g << "\n\n-------------------------\n\n\n";
+    ifstream f;
+    ofstream g("test_out.txt");
+
+    int option;
+
+
+    cout << "1.Test 10 numere\n2.Test 100 numere\n3.Test 100 zerouri\n4.Test 500mii\n5.Test maxim";
+    cout << "\nIntrodu numar: ";
+    cin >> option;
+
+    switch (option) {
+        case 1:
+            f.open("test1_in.txt");
+            
+            cout << "Testul " << option << " a fost ales\n";
+            break;
+        case 2:
+            f.open("test2_in.txt");
+            cout << "Testul " << option << " a fost ales\n";
+            break;
+        case 3:
+            f.open("test3_in.txt");
+            cout << "Testul " << option << " a fost ales\n";
+            break;
+        case 4:
+            f.open("test4_in.txt");
+            cout << "Testul " << option << " a fost ales\n";
+            break;
+        case 5:
+            f.open("test5_in.txt");
+            cout << "Testul " << option << " a fost ales\n";
+            break;
+        default:
+         cout << "Nu ai ales corect\n";
+         break;
+    }
+
+    if(option < 1 || option > 5)
+        return 0;
+    
+    auto start = high_resolution_clock::now();
 
     MultimeVector v;
     while(f >> numar)
@@ -203,22 +241,22 @@ int main()
         insereaza(v, numar);    // O(n)
     }
 
-    // for(int i=0; i< v.lungime; i++)
-    //     g << v.multime[i]<< " ";
-    // g << '\n';
-    g << "\n\n\n" << min(v) << " " << max(v) << '\n';  // O(1)
+ 
+
+
+    g << "Minim: " << min(v) << "\nMaxim: " << max(v) << '\n';  // O(1)
     sterge(v, 10);  // O(n) in cel mai rau caz
-    g << predecesor(v, 600) << " " << '\n'; // O(n*logn)
-    g << k_element(v, 2931) << '\n';  // O(n*logn)
-    g << cardinal(v) << '\n';  // O(1)
-    g << este_in(v, -1) << '\n'; // O(n) in cel mai rau caz
+    g << "Predecesor: " << predecesor(v, 600) << " " << '\n'; // O(n*logn)
+    g << "K-element: " << k_element(v, 2931) << '\n';  // O(n*logn)
+    g << "Cardinal: " << cardinal(v) << '\n';  // O(1)
+    g << "Este-in: " << este_in(v, -1) << '\n'; // O(n) in cel mai rau caz
     f.close();
-    g.close();
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
-    cout << '\n';
-    cout << duration.count() << endl;   
+    g << "\nTimp executie: ";
+    g << duration.count() << "ms\n";  
+    g.close(); 
 
     return 0;
 

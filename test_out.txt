@@ -1,0 +1,8 @@
+Minim: 2147483647
+Maxim: -2147483648
+Predecesor: -1225088665 
+K-element: -1
+Cardinal: 0
+Este-in: 0
+
+Timp executie: 0ms
