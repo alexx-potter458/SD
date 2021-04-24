@@ -189,9 +189,6 @@ int este_in(MultimeVector &multimeaMea, int x){
 
 int main()
 {
-
-
-    
     int numar;
     ifstream f;
     ofstream g("test_out.txt");
@@ -199,7 +196,7 @@ int main()
     int option;
 
 
-    cout << "1.Test 10 numere\n2.Test 100 numere\n3.Test 100 zerouri\n4.Test 500mii\n5.Test maxim";
+    cout << "1.Test 10 numere\n2.Test 100 numere\n3.Test 10000 numere\n4.Test 500mii\n5.Test maxim(600mii)";
     cout << "\nIntrodu numar: ";
     cin >> option;
 
@@ -232,30 +229,53 @@ int main()
 
     if(option < 1 || option > 5)
         return 0;
+
+
+    int elementDeSters, numarPredecesor, numarSuccesor, elementulK, exsitaNumar;
+
+    cout << "\nIntrodu element de sters: ";
+    cin >> elementDeSters;
+
+    cout << "Introdu numarul pt care vrei predecesor: ";
+    cin >> numarPredecesor;
+
+    cout << "Introdu numarul pt care vrei succesor: ";
+    cin >> numarSuccesor;
+
+    cout << "Introdu pozitia k pt pozitia cresc: ";
+    cin >> elementulK;
+
+    cout << "Introdu numarul de cautat: ";
+    cin >> exsitaNumar;
     
     auto start = high_resolution_clock::now();
 
     MultimeVector v;
     while(f >> numar)
     {
-        insereaza(v, numar);    // O(n)
+        insereaza(v, numar);// O(n)
     }
 
- 
-
-
     g << "Minim: " << min(v) << "\nMaxim: " << max(v) << '\n';  // O(1)
-    sterge(v, 10);  // O(n) in cel mai rau caz
-    g << "Predecesor: " << predecesor(v, 600) << " " << '\n'; // O(n*logn)
-    g << "K-element: " << k_element(v, 2931) << '\n';  // O(n*logn)
+    sterge(v, elementDeSters);  // O(n) in cel mai rau caz
+    g << "Predecesor: " << predecesor(v, numarPredecesor) << " " << '\n'; // O(n*logn)
+    g << "Succesor: " << succesor(v, numarSuccesor) << " " << '\n'; // O(n*logn)
+    g << "K-element in ordine crescatoare: " << k_element(v, elementulK) << '\n';  // O(n*logn)
     g << "Cardinal: " << cardinal(v) << '\n';  // O(1)
-    g << "Este-in: " << este_in(v, -1) << '\n'; // O(n) in cel mai rau caz
+
+    if(este_in(v, exsitaNumar) == 1) // O(n) in cel mai rau caz
+        g << "Numarul este in multime" << '\n';
+    else
+        g << "Numarul nu este in multime" << '\n'; 
     f.close();
 
     auto stop = high_resolution_clock::now();
     auto duration = duration_cast<microseconds>(stop - start);
+    auto durationInSeconds = duration_cast<seconds>(stop - start);
     g << "\nTimp executie: ";
     g << duration.count() << "ms\n";  
+    g << "Timp executie: ";
+    g << durationInSeconds.count() << "s\n";  
     g.close(); 
 
     return 0;
