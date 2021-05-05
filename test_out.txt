@@ -1,8 +1,10 @@
-Minim: 2147483647
-Maxim: -2147483648
-Predecesor: -1225088665 
-K-element: -1
-Cardinal: 0
-Este-in: 0
+Minim: 1
+Maxim: 999998
+Predecesor: -344473770 
+Succesor: 0 
+K-element in ordine crescatoare: 10
+Cardinal: 734962
+Numarul nu este in multime
 
-Timp executie: 0ms
+Timp executie: 391136466ms
+Timp executie: 391s
