@@ -2,7 +2,6 @@
 #include <fstream>
 
 using namespace std;
-
 ofstream g;
 
 class structura
@@ -237,6 +236,7 @@ int get_lungime(structura s)
 
 const char* exista(structura s,int x)
 {
+    
     if(s.lungime)
     {
         g<<"Elementul "<<x<<" exista: ";
@@ -252,7 +252,7 @@ const char* exista(structura s,int x)
 int main()
 {
     ifstream f;
-    int op, elem, option=5;
+    int op, elem, option = 3;
     structura v;
     cout<<"\t\tComenzi posibile"<<endl;
     cout<<"*********************************************"<<endl;
@@ -264,7 +264,7 @@ int main()
     do
     {
         cout<<"Citeste optiunea ";
-        //cin>>option;
+        // cin>>option;
 
         if(option == 1)
         {
@@ -345,7 +345,7 @@ int main()
         }
         else if(op == 8)
         {
-            g<<este_in(v,elem);
+            g<<exista(v,elem);
             g<<endl<<endl;
         }
         else if(op == 7)
@@ -356,5 +356,7 @@ int main()
     }
     f.close();
     g.close();
+    delete[] v.v;
+    delete[] v.temp;
     return 0;
 }
