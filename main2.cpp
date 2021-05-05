@@ -35,8 +35,6 @@ void insereaza(structura &s, int x)
         if(s.lungime >= 1)
             if(s.v[0]>x)
             {
-
-
                 s.temp = new int[s.lungime+1];
                 s.lungime++;
                 for(int i=1; i<=s.lungime; i++)
@@ -155,11 +153,11 @@ void stergere(structura &s,int x)
             s.lungime--;
             delete[] s.v;
             s.v = s.temp;
-            g<<"Elementul "<<x<<" a fost sters."<<endl;
+            g <<"Elementul "<< x <<" a fost sters."<< endl;
             //afisare(s);
         }
         else
-            g<<"Elementul nu exista in structura.";
+            g <<"Elementul nu exista in structura.";
     }
 }
 
