@@ -1,0 +1,421 @@
+Elementul 286 a fost introdus.
+
+Elementul 959 a fost introdus.
+
+Elementul 551 nu exista in structura.
+
+Elementul de pe pozitia 0 este: 286
+
+Elementul 920 exista: Nu
+
+Valoarea minima din structura este: 286
+
+Elementul 453 exista: Nu
+
+Elementul 226 a fost introdus.
+
+Elementul 959 a fost sters.
+
+Elementul 821 a fost introdus.
+
+Elementul 218 a fost introdus.
+
+Elementul 258 a fost introdus.
+
+Cardinalul este: 5
+
+Cardinalul este: 5
+
+Elementul 74 a fost introdus.
+
+Cardinalul este: 6
+
+Elementul 147 a fost introdus.
+
+Elementul 430 a fost introdus.
+
+Cardinalul este: 8
+
+Elementul 479 a fost introdus.
+
+Elementul 724 a fost introdus.
+
+Elementul 918 a fost introdus.
+
+Elementul 800 a fost introdus.
+
+Elementul 722 a fost introdus.
+
+Cardinalul este: 13
+
+Elementul 897 a fost introdus.
+
+Valoarea maxima din structura este: 918
+
+Elementul 62 nu exista in structura.
+
+Cardinalul este: 14
+
+Elementul 66 a fost introdus.
+
+Elementul 132 nu exista in structura.
+
+Elementul 218 exista: Da
+
+Cardinalul este: 15
+
+Elementul 103 a fost introdus.
+
+Cardinalul este: 16
+
+Elementul 298 a fost introdus.
+
+Valoarea maxima din structura este: 918
+
+Elementul 298 il are ca predecesor pe 286
+
+Elementul 737 a fost introdus.
+
+Elementul 810 a fost introdus.
+
+Elementul 240 a fost introdus.
+
+Elementul 602 a fost introdus.
+
+Elementul 495 a fost introdus.
+
+Elementul de pe pozitia 0 este: 66
+
+Elementul 470 a fost introdus.
+
+Elementul 483 a fost introdus.
+
+Elementul 833 nu exista in structura.
+
+Elementul 165 a fost introdus.
+
+Elementul 423 a fost introdus.
+
+Elementul 129 a fost introdus.
+
+Elementul 107 a fost introdus.
+
+Elementul 828 a fost introdus.
+
+Elementul nu exista in structura.
+
+Cardinalul este: 29
+
+Cardinalul este: 29
+
+Elementul 240 a fost sters.
+
+Valoarea maxima din structura este: 918
+
+Elementul 30 a fost introdus.
+
+Elementul de pe pozitia 0 este: 30
+
+Elementul 333 a fost introdus.
+
+Elementul 503 a fost introdus.
+
+Elementul nu exista in structura.
+
+Valoarea minima din structura este: 30
+
+Elementul de pe pozitia 0 este: 30
+
+Elementul 754 a fost introdus.
+
+Elementul 964 a fost introdus.
+
+Elementul nu exista in structura.
+
+Elementul 437 exista: Nu
+
+Elementul 930 exista: Nu
+
+Elementul 164 a fost introdus.
+
+Elementul 910 a fost introdus.
+
+Elementul 662 a fost introdus.
+
+Valoarea minima din structura este: 30
+
+Elementul 264 a fost introdus.
+
+Elementul 651 a fost introdus.
+
+Valoarea minima din structura este: 30
+
+Elementul 619 a fost introdus.
+
+Valoarea maxima din structura este: 964
+
+Elementul 185 exista: Nu
+
+Elementul 799 a fost introdus.
+
+Elementul 577 a fost introdus.
+
+Elementul 884 a fost introdus.
+
+Valoarea minima din structura este: 30
+
+Valoarea maxima din structura este: 964
+
+Elementul 875 exista: Nu
+
+Cardinalul este: 42
+
+Elementul 6 a fost introdus.
+
+Elementul 916 nu exista in structura.
+
+Elementul 476 a fost introdus.
+
+Elementul de pe pozitia 0 este: 6
+
+Elementul 126 a fost introdus.
+
+Elementul 699 a fost introdus.
+
+Valoarea maxima din structura este: 964
+
+Elementul 177 a fost introdus.
+
+Elementul 759 a fost introdus.
+
+Elementul 737 il are ca succesor pe 754
+
+Elementul 449 a fost introdus.
+
+Elementul 964 a fost sters.
+
+Cardinalul este: 48
+
+Elementul 35 a fost introdus.
+
+Elementul 298 il are ca predecesor pe 286
+
+Elementul de pe pozitia 0 este: 6
+
+Elementul 918 exista: Da
+
+Valoarea minima din structura este: 6
+
+Valoarea maxima din structura este: 918
+
+Elementul 396 a fost introdus.
+
+Elementul 234 a fost introdus.
+
+Elementul 27 a fost introdus.
+
+Elementul 577 il are ca predecesor pe 503
+
+Elementul 213 a fost introdus.
+
+Cardinalul este: 53
+
+Elementul nu exista in structura.
+
+Elementul 872 a fost introdus.
+
+Elementul 370 a fost introdus.
+
+Valoarea minima din structura este: 6
+
+Elementul 87 a fost introdus.
+
+Elementul 827 a fost introdus.
+
+Elementul 809 a fost introdus.
+
+Elementul 63 a fost introdus.
+
+Elementul 109 a fost introdus.
+
+Elementul 238 a fost introdus.
+
+Valoarea maxima din structura este: 918
+
+Elementul 499 a fost introdus.
+
+Elementul 623 a fost introdus.
+
+Elementul 53 a fost introdus.
+
+Valoarea minima din structura este: 6
+
+Elementul 925 a fost introdus.
+
+Elementul 516 a fost introdus.
+
+Elementul 726 a fost introdus.
+
+Elementul de pe pozitia 0 este: 6
+
+Elementul 828 a fost sters.
+
+Elementul 980 a fost introdus.
+
+Elementul nu exista in structura.
+
+Elementul 615 a fost introdus.
+
+Elementul 749 a fost introdus.
+
+Cardinalul este: 69
+
+Cardinalul este: 69
+
+Valoarea maxima din structura este: 980
+
+Elementul 452 nu exista in structura.
+
+Elementul 6 exista: Da
+
+Elementul 361 a fost introdus.
+
+Elementul 884 exista: Da
+
+Elementul nu exista in structura.
+
+Elementul 411 exista: Nu
+
+Elementul 423 il are ca succesor pe 430
+
+Elementul 723 a fost introdus.
+
+Elementul 702 a fost introdus.
+
+Elementul 797 nu exista in structura.
+
+Valoarea maxima din structura este: 980
+
+Elementul 510 a fost introdus.
+
+Elementul 30 a fost sters.
+
+Cardinalul este: 72
+
+Cardinalul este: 72
+
+Elementul 474 exista: Nu
+
+Elementul 810 il are ca succesor pe 821
+
+Elementul 218 il are ca succesor pe 226
+
+Elementul 800 il are ca predecesor pe 799
+
+Elementul 990 a fost introdus.
+
+Elementul de pe pozitia 0 este: 6
+
+Elementul 404 a fost introdus.
+
+Elementul 443 a fost introdus.
+
+Elementul 909 a fost introdus.
+
+Elementul 35 exista: Da
+
+Elementul 909 il are ca predecesor pe 897
+
+Elementul 565 a fost introdus.
+
+Elementul 467 exista: Nu
+
+Elementul 713 a fost introdus.
+
+Elementul 423 a fost sters.
+
+Elementul 542 a fost introdus.
+
+Elementul de pe pozitia 0 este: 6
+
+Elementul 63 il are ca predecesor pe 53
+
+Valoarea minima din structura este: 6
+
+Elementul nu exista in structura.
+
+Elementul 691 a fost introdus.
+
+Elementul 620 a fost introdus.
+
+Elementul 443 a fost sters.
+
+Elementul 226 il are ca succesor pe 234
+
+Elementul 302 a fost introdus.
+
+Valoarea maxima din structura este: 990
+
+Elementul 854 a fost introdus.
+
+Elementul 564 a fost introdus.
+
+Elementul 900 a fost introdus.
+
+Valoarea minima din structura este: 6
+
+Elementul 342 a fost introdus.
+
+Valoarea minima din structura este: 6
+
+Elementul nu exista in structura.
+
+Elementul 872 il are ca predecesor pe 854
+
+Elementul 910 a fost sters.
+
+Elementul 642 a fost introdus.
+
+Elementul 825 nu exista in structura.
+
+Elementul 789 a fost introdus.
+
+Cardinalul este: 85
+
+Elementul 390 a fost introdus.
+
+Elementul 631 a fost introdus.
+
+Elementul 653 a fost introdus.
+
+Cardinalul este: 88
+
+Elementul nu exista in structura.
+
+Elementul 720 a fost introdus.
+
+Elementul 853 exista: Nu
+
+Cardinalul este: 89
+
+Elementul 36 a fost introdus.
+
+Elementul 725 a fost introdus.
+
+Cardinalul este: 91
+
+Elementul 901 exista: Nu
+
+Elementul 107 a fost sters.
+
+Elementul 369 a fost introdus.
+
+Cardinalul este: 91
+
+Elementul nu exista in structura.
+
+Elementul 436 a fost introdus.
+
+
+Timp executie: 997ms
+Timp executie: 0s

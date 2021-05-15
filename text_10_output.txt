@@ -1,0 +1,57 @@
+Elementul 5 a fost introdus.
+
+Elementul 2 a fost introdus.
+
+Valoarea maxima din structura este: 5
+
+Elementul 2 este pe prima pozitie si nu are predecesor.
+
+Elementul 5 a fost sters.
+
+Elementul 7 a fost introdus.
+
+Elementul 3 a fost introdus.
+
+Elementul 10 a fost introdus.
+
+Elementul 7 il are ca succesor pe 10
+
+Elementul 3 il are ca succesor pe 7
+
+Valoarea minima din structura este: 2
+
+Elementul 8 a fost introdus.
+
+Elementul de pe pozitia 0 este: 2
+
+Cardinalul este: 5
+
+Elementul 5 exista: Nu
+
+Elementul 2 exista: Da
+
+Elementul 20 a fost introdus.
+
+Elementul 0 a fost introdus.
+
+Elementul 20 exista: Da
+
+Elementul 2 a fost sters.
+
+Elementul 2 exista: Nu
+
+Cardinalul este: 6
+
+Elementul 15 a fost introdus.
+
+Valoarea minima din structura este: 0
+
+Valoarea maxima din structura este: 20
+
+Elementul 2 nu exista in structura.
+
+Elementul 11 a fost introdus.
+
+
+Timp executie: 0ms
+Timp executie: 0s
