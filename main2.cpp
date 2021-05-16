@@ -252,7 +252,7 @@ const char* exista(structura s,int x)
 int main()
 {
     ifstream f;
-    int op, elem, option = 3;
+    int op, elem, option = 0;
     structura v;
     cout<<"\t\tComenzi posibile"<<endl;
     cout<<"*********************************************"<<endl;
@@ -264,7 +264,7 @@ int main()
     do
     {
         cout<<"Citeste optiunea ";
-        // cin>>option;
+        cin>>option;
 
         if(option == 1)
         {
